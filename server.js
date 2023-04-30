@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
 const homeRoutes = require("./routes/home");
+const connectDB = require('./config/database');
 
 //Load .env file in config folder
 dotenv.config({ path: "./config/config.env" }); // load config
