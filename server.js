@@ -7,6 +7,8 @@ const connectDB = require('./config/database');
 //Load .env file in config folder
 dotenv.config({ path: "./config/config.env" }); // load config
 
+connectDB();
+
 //Static Folder
 app.use(express.static("public"));
 
