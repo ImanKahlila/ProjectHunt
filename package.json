@@ -1,5 +1,5 @@
 {
-  "name": "codecollab",
+  "name": "projecthunt",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ImanKahlila/CodeCollab.git"
+    "url": "git+https://github.com/ImanKahlila/ProjectHunt.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ImanKahlila/CodeCollab/issues"
+    "url": "https://github.com/ImanKahlila/ProjectHunt/issues"
   },
-  "homepage": "https://github.com/ImanKahlila/CodeCollab#readme",
+  "homepage": "https://github.com/ImanKahlila/ProjectHunt#readme",
   "dependencies": {
     "dotenv": "^16.0.3",
     "ejs": "^3.1.9",
