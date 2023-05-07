@@ -4,13 +4,13 @@
 
 1. Run ```npm install``` to install the required Node packages.
 
-2. Copy the **example.env** file into the **config folder** in the root directory of the project and rename to **config.env**.
+2. Copy the **example.env** file into the **config folder** in the root directory of the project and rename to **config.env** .
 
-3. In the config.env file, make sure there is a number after PORT for local hosting i.e. **PORT = 7777**
+3. In the config.env file, make sure there is a number after PORT for local hosting i.e. **PORT = 7777** .
 
 4. Navigate to your MongoDB Atlas database connection and find your Database Connection String.
 
-5. Paste after **DB_STRING =** (Note: ensure you update the `password` to your database password)
+5. Paste after **DB_STRING =** (Note: ensure you update the `password` to your database password).
 
 6. Save the config.env file.
 
