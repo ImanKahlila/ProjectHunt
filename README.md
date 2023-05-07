@@ -8,7 +8,7 @@
 
 3. In the config.env file, make sure there is a number after PORT for local hosting i.e. **PORT = 7777**
 
-4. Navigate to your MongoDB Atlas database connection and find your Database Connection String
+4. Navigate to your MongoDB Atlas database connection and find your Database Connection String.
 
 5. Paste after **DB_STRING =** (Note: ensure you update the `password` to your database password)
 
