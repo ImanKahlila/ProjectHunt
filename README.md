@@ -14,6 +14,6 @@
 
 6. Save the config.env file.
 
-7. Execute ```npm start``` to start the server. If you prefer, you can also use ```nodemon start``` instead to automatically reflect any changes.
+7. Execute ```npm start``` to start the server.
 
 8. In the browser search for localhost: <--**add your port number after the colon** to view what we have. i.e.: http://localhost:7777
