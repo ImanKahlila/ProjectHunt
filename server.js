@@ -1,11 +1,12 @@
 const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
+const mongoose = require('mongoose');
 const homeRoutes = require("./routes/home");
 const connectDB = require('./config/database');
 
 //Load .env file in config folder
-dotenv.config({ path: "./config/config.env" }); // load config
+require("dotenv").config({ path: "./config/.env" }); // load config
 
 connectDB();
 
