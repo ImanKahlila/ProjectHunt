@@ -1,0 +1,23 @@
+<%- include('partials/header') -%>
+
+<main>
+  <% if (locals.messages && locals.messages.errors) { %>
+    <% messages.errors.forEach(el => { %>
+      <div role="alert" class="error-message"><%= el.msg %></div>
+    <% }) %>
+  <% } %>
+  <% if (locals.messages && locals.messages.info) { %>
+    <% messages.info.forEach(el => { %>
+      <div role="alert" class="info-message"><%= el.msg %></div>
+    <% }) %>
+  <% } %>
+  <form action="/login" method="POST">
+    <label for="email">Email address:</label>
+    <input type="email" id="email" name="email">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <button type="submit">Submit</button>
+  </form>
+</main>
+
+<%- include('partials/footer') -%>
