@@ -1,11 +1,64 @@
+/* Box Model Hack */
 * {
-    margin: 0;
-    padding: 0;
-    }
-
-h1 {
-    background-color: cornflowerblue;
-    font-family: sans-serif;
-    color: azure;
-    
+    box-sizing: border-box;
 }
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+/******************************************/
+/* Base Styles
+/******************************************/
+
+/* body {
+
+} */
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000;
+}
+
+/******************************************/
+/* Header
+/******************************************/
+
+/* header {
+
+} */
+
+header ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+/******************************************/
+/* Footer
+/******************************************/
+
+/* footer {
+
+} */
+
+/******************************************/
+/* Additional Styles
+/******************************************/
