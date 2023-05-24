@@ -1,0 +1,31 @@
+<%- include('partials/header') -%>
+    <main>
+        <form action="/createProject" method="POST">
+            <label for="name">Project Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="description">Project Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="url">GitHub URL:</label>
+            <input type="text" id="url" name="url" required>
+
+            <label for="skill">Skill Level:</label>
+            <select id="skill" name="skill" required>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+
+            <label for="status">Project Status:</label>
+            <select id="status" name="status" required>
+                <option value="planning">Planning</option>
+                <option value="in progress">In Progress</option>
+                <option value="completed">Completed</option>
+                <option value="on hold">On Hold</option>
+            </select>
+
+            <button type="submit">Create Project</button>
+        </form>
+    </main>
+    <%- include('partials/footer') -%>
