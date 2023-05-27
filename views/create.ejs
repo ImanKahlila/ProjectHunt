@@ -1,16 +1,23 @@
 <%- include('partials/header') -%>
+
     <main>
+        <!-- Form for creating a project -->
         <form action="/createProject" method="POST">
+
             <label for="name">Project Name:</label>
+            <!-- Input field for entering the project name, required field -->
             <input type="text" id="name" name="name" required>
 
             <label for="description">Project Description:</label>
+            <!-- Textarea for entering the project description, required field -->
             <textarea id="description" name="description" required></textarea>
 
             <label for="url">GitHub URL:</label>
+            <!-- Input field for entering the GitHub URL, required field -->
             <input type="text" id="url" name="url" required>
 
             <label for="skill">Skill Level:</label>
+            <!-- Select dropdown for selecting the skill level -->
             <select id="skill" name="skill" required>
                 <option value="beginner">Beginner</option>
                 <option value="intermediate">Intermediate</option>
@@ -18,6 +25,7 @@
             </select>
 
             <label for="status">Project Status:</label>
+            <!-- Select dropdown for selecting the project status -->
             <select id="status" name="status" required>
                 <option value="planning">Planning</option>
                 <option value="in progress">In Progress</option>
@@ -25,7 +33,14 @@
                 <option value="on hold">On Hold</option>
             </select>
 
+            <!-- Input field for entering the timezone, with id "timezone-input" and name "timezone" -->
+            <input type="text" name="timezone" id="timezone-input" placeholder="Enter timezone">
+            <!-- Empty div for displaying timezone suggestions -->
+            <div id="timezone-suggestions"></div>
+
+            <!-- Submit button for creating the project -->
             <button type="submit">Create Project</button>
         </form>
     </main>
+
     <%- include('partials/footer') -%>

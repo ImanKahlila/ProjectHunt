@@ -23,11 +23,15 @@ const ProjectSchema = new mongoose.Schema({
         enum: ['planning', 'in progress', 'completed', 'on hold'],
         default: 'planning'
     },
+    creator_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+    },
+    timezone: {
+        type: String,
+        required: true
+    },
     // Temporarily commenting out to focus on Project creation
-    // timezone: {
-    //     type: String,
-    //     required: true
-    // },
     // technologiesUsed: [{
     //     type: mongoose.Schema.Types.ObjectId,
     //     ref: 'Technology'
@@ -36,10 +40,6 @@ const ProjectSchema = new mongoose.Schema({
     //     type: mongoose.Schema.Types.ObjectId,
     //     ref: 'Organization',
     //     required: true
-    // },
-    // creator_id: {
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: "User",
     // },
     // members: [{
     //     type: mongoose.Schema.Types.ObjectId,
