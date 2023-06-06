@@ -1,5 +1,5 @@
 <!-- Condition: If the current page is 'create' -->
-<% if (currentPage==='create' ) { %>
+<% if (typeof currentPage !== 'undefined' && currentPage === 'create') { %>
     <!-- Include the Awesomplete library from a CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js"
         integrity="sha512-HcBl0GSJvt4Qecm4srHapirUx0HJDi2zYXm6KUKNNUGdTIN9cBwakVZHWmRVj4MKgy1AChqhWGYcMDbRKgO0zg=="
@@ -8,8 +8,7 @@
 
     <!-- Include the bundled JavaScript file for the create page -->
     <script src="/bundle.js"></script>
-    <% } %>
+<% } %>
 
-        </body>
-
-        </html>
+</body>
+</html>

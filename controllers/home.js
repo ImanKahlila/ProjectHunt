@@ -8,7 +8,7 @@ module.exports = {
     // Render the user profile page
     getProfile: async (req, res) => {
         try {
-            res.render("profile.ejs", { user: req.user, currentPage: 'profile' });
+            res.render("profile.ejs", { user: req.user});
             // Render the "profile.ejs" view and pass the user and currentPage variables to the view
         } catch (err) {
             console.log(err);
