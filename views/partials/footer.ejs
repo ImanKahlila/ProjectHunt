@@ -1,7 +1,14 @@
-<!-- Might not use a css library but rather use our own custom css -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-    crossorigin="anonymous"></script>
-</body>
+<!-- Condition: If the current page is 'create' -->
+<% if (typeof currentPage !== 'undefined' && currentPage === 'create') { %>
+    <!-- Include the Awesomplete library from a CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js"
+        integrity="sha512-HcBl0GSJvt4Qecm4srHapirUx0HJDi2zYXm6KUKNNUGdTIN9cBwakVZHWmRVj4MKgy1AChqhWGYcMDbRKgO0zg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- It provides autocomplete functionality for input fields -->
 
+    <!-- Include the bundled JavaScript file for the create page -->
+    <script src="/bundle.js"></script>
+<% } %>
+
+</body>
 </html>
