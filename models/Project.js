@@ -5,6 +5,11 @@ const ProjectSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    organization: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Organization',
+        required: true
+    },
     description: {
         type: String,
         required: true
@@ -36,11 +41,6 @@ const ProjectSchema = new mongoose.Schema({
     //     type: mongoose.Schema.Types.ObjectId,
     //     ref: 'Technology'
     // }],
-    // organization: {
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: 'Organization',
-    //     required: true
-    // },
     // members: [{
     //     type: mongoose.Schema.Types.ObjectId,
     //     ref: 'User'
