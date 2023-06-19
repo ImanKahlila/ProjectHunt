@@ -36,13 +36,14 @@ module.exports = {
                 console.log('new organization created');
             }
             //find the organization document(whether preextisting or newly created) in collection and assign to variable to allow access to the oraganization _id below
-            let currentOrg = await Organization.find({name:req.body.org});
+            //since this 'find' function returns an array holding the match, array destructruing is used to assign the Organization Obj to the currentOrg variable
+            let [currentOrg] = await Organization.find({name:req.body.org});
             console.log(currentOrg);
 
             await Project.create({
                 creator_id: req.user.id,
                 name: req.body.name,
-                organization: currentOrg[0].id,
+                organization: currentOrg.id,
                 description: req.body.description,
                 githubUrl: req.body.url,
                 skillLevel: req.body.skill,
