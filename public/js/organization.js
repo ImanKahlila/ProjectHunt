@@ -12,12 +12,14 @@ async function getOrgs() {
     });
     const data = await response.json();
     const orgNames = data.map((org) => org.name);
+    const orgMap = new Map(data.map((org) => [org.name, org.website])); // Create a mapping of organization names to website values
 
     new Awesomplete(input, { list: orgNames });
 
     input.addEventListener("awesomplete-selectcomplete", function (event) {
       const selectedOrganization = event.text.value;
-      websiteInput.value = selectedOrganization; // Autofill the website input field with the selected organization
+      const selectedWebsite = orgMap.get(selectedOrganization); // Retrieve the website value from the mapping
+      websiteInput.value = selectedWebsite; // Autofill the website input field with the selected organization's website
     });
   } catch (err) {
     console.log(err);
