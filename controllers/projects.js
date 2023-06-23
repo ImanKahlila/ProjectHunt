@@ -12,11 +12,11 @@ module.exports = {
         }
     },
 
-    // get orgs from DB and send to clientside for use in creating an array(in Organization.js) for awesomplete for organizations field in the create project form
+    // get orgs from DB, map to array of names, and send to clientside(Organization.js) for awesomplete suggestions in organization field in the create project form
     getOrgs: async (req, res) => {
         try {
-            const orgs = await Organization.find()
-            res.json(orgs)
+            const orgs = await Organization.find().lean();
+            res.json(orgs.map((org) => org.name));
         } catch (err) {
             console.log(err);
         }
@@ -25,25 +25,10 @@ module.exports = {
     // Create a new project
     createProject: async (req, res) => {
         try {
-            //check for existance of organization name in Organizatin collection to prevent duplicates
-            let orgExists = await Organization.exists({name:req.body.org});
-            //if non existant then create organization
-            if (orgExists === false){
-                await Organization.create({
-                    name: req.body.org,
-                    website: req.body.website,
-                }); 
-                console.log('new organization created');
-            }
-            //find the organization document(whether preextisting or newly created) in collection and assign to variable to allow access to the oraganization _id below
-            //since this 'find' function returns an array holding the match, array destructruing is used to assign the Organization Obj to the currentOrg variable
-            let [currentOrg] = await Organization.find({name:req.body.org});
-            console.log(currentOrg);
-
             await Project.create({
                 creator_id: req.user.id,
                 name: req.body.name,
-                organization: currentOrg.id,
+                organization: req.body.org,
                 description: req.body.description,
                 githubUrl: req.body.url,
                 skillLevel: req.body.skill,

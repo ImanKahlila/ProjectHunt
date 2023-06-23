@@ -5,10 +5,6 @@ const OrganizationSchema = new mongoose.Schema({
         type: {String, unique: true},
         required: true,
     },
-    website: {
-        type: {String, unique: true},
-        required: true,
-    }
 });
 
 module.exports = mongoose.model('Organization', OrganizationSchema);

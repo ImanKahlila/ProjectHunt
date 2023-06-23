@@ -6,8 +6,7 @@ const ProjectSchema = new mongoose.Schema({
         required: true
     },
     organization: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Organization',
+        type: String,
         required: true
     },
     description: {
