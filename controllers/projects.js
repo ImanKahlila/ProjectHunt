@@ -1,4 +1,5 @@
 const Project = require("../models/Project");
+const Organization = require("../models/Organization");
 
 module.exports = {
     // Render the create project form
@@ -11,12 +12,23 @@ module.exports = {
         }
     },
 
+    // get orgs from DB, map to array of names, and send to clientside(Organization.js) for awesomplete suggestions in organization field in the create project form
+    getOrgs: async (req, res) => {
+        try {
+            const orgs = await Organization.find().lean();
+            res.json(orgs.map((org) => org.name));
+        } catch (err) {
+            console.log(err);
+        }
+    },
+
     // Create a new project
     createProject: async (req, res) => {
         try {
             await Project.create({
                 creator_id: req.user.id,
                 name: req.body.name,
+                organization: req.body.org,
                 description: req.body.description,
                 githubUrl: req.body.url,
                 skillLevel: req.body.skill,
