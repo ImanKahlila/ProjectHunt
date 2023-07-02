@@ -43,6 +43,18 @@
             <!-- Empty div for displaying timezone suggestions -->
             <div id="timezone-suggestions"></div>
 
+            <!-- Div acting as the container for entering and displaying technologies -->
+            <div id="technologies-container" class="tag-container">
+                <!-- Hidden input field for storing comma-separated values -->
+                <input type="hidden" name="technologies" id="technology-input" class="tag-input">
+                <!-- Input field for entering technologies -->
+                <input type="text" id="technology-text-input" placeholder="Enter technologies">
+                <!-- Container for displaying tags -->
+                <div id="tags"></div>
+            </div>
+            <!-- Empty div for displaying technology suggestions -->
+            <div id="technology-suggestions"></div>
+
             <!-- Submit button for creating the project -->
             <button type="submit">Create Project</button>
         </form>
