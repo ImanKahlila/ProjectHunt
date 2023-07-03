@@ -1,10 +1,23 @@
+<footer class="footer">
+    <div class="footer__card">
+        <p class="footer__text">© 2023 ProjectHunt</p>
+        <p class="footer__text">Made by <a href="https://github.com/ImanKahlila/ProjectHunt"
+                class="footer__author-link">100dev folx</a></p>
+    </div>
+</footer>
+
+
+<script src="js/main.js"></script>
+
 <!-- Condition: If the current page is 'create' -->
-<% if (typeof currentPage !== 'undefined' && currentPage === 'create') { %>
+
+<% if (typeof currentPage !=='undefined' && currentPage==='create' ) { %>
     <!-- Include the Awesomplete library from a CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js"
         integrity="sha512-HcBl0GSJvt4Qecm4srHapirUx0HJDi2zYXm6KUKNNUGdTIN9cBwakVZHWmRVj4MKgy1AChqhWGYcMDbRKgO0zg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- It provides autocomplete functionality for input fields -->
+
 
     <!-- Include the bundled JavaScript file for the create page -->
     <script src="/bundle.js"></script>
@@ -12,5 +25,6 @@
     <script src="js/organization.js"></script>
     <% } %>
 
-</body>
-</html>
+        </body>
+
+        </html>

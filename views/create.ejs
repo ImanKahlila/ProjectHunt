@@ -1,50 +1,56 @@
 <%- include('partials/header') -%>
 
-    <main>
+    <main class="create">
+
         <!-- Form for creating a project -->
-        <form action="/createProject" method="POST">
+        <form action="/createProject" method="POST" class="create__form">
+            <h1 class="create__title">Create a Project</h1>
 
-            <label for="name">Project Name:</label>
+            <label for="name" class="create__label">Project Name</label>
             <!-- Input field for entering the project name, required field -->
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" class="create__input" required>
 
-            <!-- Input field for entering the organization, with id "org-input" and name "org" -->
-            <input type="text" name="org" id="org-input" placeholder="Enter Organization">
-            <!-- Empty div for displaying organization suggestions -->
-            <div id="org-suggestions"></div>
-
-            <label for="description">Project Description:</label>
+            <label for="description" class="create__label">Description</label>
             <!-- Textarea for entering the project description, required field -->
-            <textarea id="description" name="description" required></textarea>
+            <textarea id="description" name="description" class="create__textarea" required></textarea>
 
-            <label for="url">GitHub URL:</label>
+            <label for="url" class="create__label">GitHub URL</label>
             <!-- Input field for entering the GitHub URL, required field -->
-            <input type="text" id="url" name="url" required>
+            <input type="text" id="url" name="url" class="create__input" required>
 
-            <label for="skill">Skill Level:</label>
+            <label for="organization" class="create__label">Organization</label>
+            <!-- Input field for entering the organization, with id "org-input" and name "org" -->
+            <input type="text" name="org" id="org-input" class="create__input">
+            <!-- Empty div for displaying organization suggestions -->
+            <div id="org-suggestions" class="create__suggestions"></div>
+
+
+
+            <label for="skill" class="create__label">Skill Level</label>
             <!-- Select dropdown for selecting the skill level -->
-            <select id="skill" name="skill" required>
+            <select id="skill" name="skill" class="create__select" required>
                 <option value="beginner">Beginner</option>
                 <option value="intermediate">Intermediate</option>
                 <option value="advanced">Advanced</option>
             </select>
 
-            <label for="status">Project Status:</label>
+            <label for="status" class="create__label">Status</label>
             <!-- Select dropdown for selecting the project status -->
-            <select id="status" name="status" required>
+            <select id="status" name="status" class="create__select" required>
                 <option value="planning">Planning</option>
                 <option value="in progress">In Progress</option>
                 <option value="completed">Completed</option>
                 <option value="on hold">On Hold</option>
             </select>
 
+            <label for="timezone" class="create__label">Timezone</label>
             <!-- Input field for entering the timezone, with id "timezone-input" and name "timezone" -->
-            <input type="text" name="timezone" id="timezone-input" placeholder="Enter timezone">
+            <input type="text" name="timezone" id="timezone-input" class="create__input">
             <!-- Empty div for displaying timezone suggestions -->
-            <div id="timezone-suggestions"></div>
+            <div id="timezone-suggestions" class="create__suggestions"></div>
 
             <!-- Submit button for creating the project -->
-            <button type="submit">Create Project</button>
+            <button type="submit" class="create__submit">Create</button>
         </form>
     </main>
 
