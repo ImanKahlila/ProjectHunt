@@ -49,17 +49,18 @@
             <!-- Empty div for displaying timezone suggestions -->
             <div id="timezone-suggestions" class="create__suggestions"></div>
 
+            <label for="technologies" class="create__label">Technologies</label>
             <!-- Div acting as the container for entering and displaying technologies -->
-            <div id="technologies-container" class="tag-container">
+            <div id="technologies-container" class="create__tech">
                 <!-- Hidden input field for storing comma-separated values -->
-                <input type="hidden" name="technologies" id="technology-input" class="tag-input">
+                <input type="hidden" name="technologies" id="technology-input" class="create__tag-input">
                 <!-- Input field for entering technologies -->
-                <input type="text" id="technology-text-input" placeholder="Enter technologies">
+                <input type="text" id="technology-text-input" class="create__input">
                 <!-- Container for displaying tags -->
-                <div id="tags"></div>
+                <div id="tags" class="create__tag-container"></div>
             </div>
             <!-- Empty div for displaying technology suggestions -->
-            <div id="technology-suggestions"></div>
+            <div id="technology-suggestions" class="create__suggestions"></div>
 
             <!-- Submit button for creating the project -->
             <button type="submit" class="create__submit">Create</button>

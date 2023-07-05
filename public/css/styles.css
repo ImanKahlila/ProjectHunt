@@ -275,6 +275,7 @@ a:hover {
 /* Additional Styles
 /******************************************/
 
+/* Media Query */
 
 @media screen and (min-width: 1200px) {
     body {
