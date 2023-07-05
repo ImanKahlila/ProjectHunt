@@ -10,7 +10,6 @@
 <script src="js/main.js"></script>
 
 <!-- Condition: If the current page is 'create' -->
-
 <% if (typeof currentPage !=='undefined' && currentPage==='create' ) { %>
     <!-- Include the Awesomplete library from a CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js"
@@ -18,11 +17,14 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- It provides autocomplete functionality for input fields -->
 
-
-    <!-- Include the bundled JavaScript file for the create page -->
-    <script src="/bundle.js"></script>
     <!-- Include the js file for organization field awesomplete suggestions data from DB -->
     <script src="js/organization.js"></script>
+
+    <!-- Include the js file for timezone field awesomplete suggestions data from DB -->
+    <script src="js/timezone.js"></script>
+
+    <!-- Include the js file for technology field awesomplete suggestions data from DB -->
+    <script src="js/technology.js"></script>
     <% } %>
 
         </body>
