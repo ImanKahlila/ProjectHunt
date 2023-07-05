@@ -35,11 +35,10 @@ const ProjectSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    // Temporarily commenting out to focus on Project creation
-    // technologiesUsed: [{
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: 'Technology'
-    // }],
+    technologiesUsed: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Technology'
+    }],
     // members: [{
     //     type: mongoose.Schema.Types.ObjectId,
     //     ref: 'User'
