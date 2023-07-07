@@ -20,7 +20,7 @@
 
 .create__label {
     color: #1A0F13;
-    font-size: var(--step-0);
+    font-size: var(--step-1);
     font-family: Hind;
     font-style: normal;
     font-weight: 300;
@@ -30,8 +30,8 @@
 .create__input,
 .create__textarea,
 .create__select {
-    height: 30px;
     font-family: Hind;
+    font-size: var(--step-1);
     flex-shrink: 0;
     border-radius: 5px;
     border: 1px solid #1A0F13;
@@ -48,9 +48,9 @@
 }
 
 .tag {
-    font-size: var(--step--1);
+    font-size: var(--step-0);
     font-family: Hind;
-    background-color: #788bb0;
+    background-color: #acc7fc;
     border-radius: 50px;
     padding: var(--space-3xs) var(--space-2xs);
     margin-right: var(--space-2xs);
@@ -83,7 +83,7 @@
     border-radius: 6px;
     background: #C2D5B8;
     color: #1A0F13;
-    font-size: 18px;
+    font-size: var(--step-0);
     font-family: Hind;
     font-style: normal;
     font-weight: 300;
@@ -102,6 +102,7 @@
     border: 1px solid #1A0F13;
     background: #F3E6DD;
     width: 199px;
+    font-size: var(--step-1);
 }
 
 mark {
@@ -110,7 +111,7 @@ mark {
 
 /* Media Query */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 850px) {
     .header__menu {
         transform: translateY(0);
         position: static;

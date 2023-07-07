@@ -174,7 +174,7 @@ a:hover {
 
 .header__logo {
     color: #1A0F13;
-    font-size: var(--step-1);
+    font-size: var(--step-2);
     font-family: Montserrat;
     font-style: normal;
     font-weight: 700;
@@ -183,7 +183,7 @@ a:hover {
 
 .header__menu-link {
     color: white;
-    font-size: var(--step-0);
+    font-size: var(--step-1);
     font-family: Montserrat;
     font-style: normal;
     font-weight: 400;
