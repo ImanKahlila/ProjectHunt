@@ -23,10 +23,17 @@ function updateTechnologiesInput(selectedTechnologyNames) {
 function addTechnologyTag(technology) {
   const tagsContainer = document.getElementById("tags");
   const tag = document.createElement("div");
+  const selectedTechnologyNames = getSelectedTechnologyNames();
+  const isDuplicate = selectedTechnologyNames.includes(technology.name);
+
+  if (isDuplicate) {
+    return;
+  }
+
   tag.classList.add("tag");
   tag.innerHTML = `
     <span>${technology.name}</span>
-    <button type="button" class="tag-remove-btn">&times;</button>
+    <button type="button" class="tag-remove-btn"><img src="/img/close-tag-icon.svg" alt="Close Tag" class="tag-icon"></button>
   `;
   tagsContainer.appendChild(tag);
 

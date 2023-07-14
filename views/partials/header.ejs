@@ -9,26 +9,31 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/imgs/favicon-32x32.png" />
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/pages/create-project.css" />
 </head>
 
 <body>
-    <header class="container">
-        <nav>
-            <ul>
-                <li><a href="/">HOME</a></li>
-                <li><a href="/create">CREATE PROJECT</a></li>
-                <li><a href="#">BROWSE PROJECTS</a></li>
-                <li><a href="#">JOIN PROJECT</a></li>
-                <li><a href="/login">LOGIN</a></li>
-                <li><a href="/signup">SIGN UP</a></li>
-                <li>
-                    <form action="search">
-                        <input type="text" name="search" placeholder="Search">
-                    </form>
-                </li>
+    <header class="header">
+        <nav class="header__nav">
+            <a href="/" class="header__logo">ProjectHunt</a>
+            <ul class="header__menu">
+                <li class="header__menu-item"><a href="/" class="header__menu-link">Home</a></li>
+                <li class="header__menu-item"><a href="/create" class="header__menu-link">Create</a></li>
+                <li class="header__menu-item"><a href="#" class="header__menu-link">Browse</a></li>
+                <li class="header__menu-item"><a href="/login" class="header__menu-link">Login</a></li>
+                <li class="header__menu-item"><a href="/signup" class="header__menu-link">Sign Up</a></li>
             </ul>
+            <button class="header__burger-menu-btn">
+                <i class="header__burger-menu-icon">
+                    <img src="/img/burger-menu-icon.svg" alt="Burger Menu" class="header__burger-menu-icon-img">
+                </i>
+                <i class="header__burger-close-icon">
+                    <img src="/img/close-menu-icon.svg" alt="Close Menu" class="header__burger-close-icon-img">
+                </i>
+            </button>
         </nav>
     </header>
+
 </body>
 
 </html>
