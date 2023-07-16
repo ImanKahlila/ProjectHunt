@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        <%= head.title %>
+    </title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <% if (head.css) { %>
+        <link rel="stylesheet" href="<%= head.css %>">
+        <% } %>
+</head>
+
+<body>
+    <%- include('partials/header') %>
+
+        <main>
+            <!-- Content from individual pages will be inserted here -->
+            <%- body %>
+        </main>
+        <%- include('partials/footer') %>
+
+</body>
+
+</html>

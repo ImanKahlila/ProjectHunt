@@ -6,7 +6,10 @@ module.exports = {
   // Render the create project form
   getCreate: async (req, res) => {
     try {
-      res.render("create.ejs", { user: req.user, currentPage: "create" });
+      res.render("create.ejs", {
+        user: req.user,
+        head: { title: "Create Project", css: "/css/pages/create-project.css" },
+      });
       // Render the "create.ejs" view and pass the user and currentPage variables to the view
     } catch (err) {
       console.log(err);

@@ -3,19 +3,21 @@ const Project = require("../models/Project");
 module.exports = {
   // Render the home page
   getIndex: (req, res) => {
-    res.render("index.ejs", { currentPage: "home" });
-    // Render the "index.ejs" view
+    res.render("index", {
+      head: { title: "Home", css: "" },
+      layout: "layout",
+    });
   },
 
   // Render the user profile page
   getProfile: async (req, res) => {
     try {
       const projects = await Project.find({ creator_id: req.user.id });
-      console.log({ projects });
-      res.render("profile.ejs", {
+      res.render("profile", {
+        layout: "layout",
         projects: projects,
         user: req.user,
-        currentPage: "profile",
+        head: { title: "Profile", css: "/css/pages/profile.css" },
       });
     } catch (err) {
       console.log(err);

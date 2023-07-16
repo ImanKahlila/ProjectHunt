@@ -10,7 +10,7 @@
 <script src="js/main.js"></script>
 
 <!-- Condition: If the current page is 'create' -->
-<% if (typeof currentPage !=='undefined' && currentPage==='create' ) { %>
+<% if (head.title==="Create Project" ) { %>
     <!-- Include the Awesomplete library from a CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js"
         integrity="sha512-HcBl0GSJvt4Qecm4srHapirUx0HJDi2zYXm6KUKNNUGdTIN9cBwakVZHWmRVj4MKgy1AChqhWGYcMDbRKgO0zg=="
@@ -26,7 +26,3 @@
     <!-- Include the js file for technology field awesomplete suggestions data from DB -->
     <script src="js/technology.js"></script>
     <% } %>
-
-        </body>
-
-        </html>
