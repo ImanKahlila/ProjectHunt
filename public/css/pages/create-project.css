@@ -108,32 +108,3 @@
 mark {
     background-color: #788bb0;
 }
-
-/* Media Query */
-
-@media screen and (min-width: 850px) {
-    .header__menu {
-        transform: translateY(0);
-        position: static;
-        background-color: #FBF9F9;
-        flex-direction: row;
-        padding: 0;
-        gap: var(--space-l)
-    }
-
-    .header__menu-link {
-        color: #1A0F13;
-    }
-
-    .header__burger-menu-btn {
-        display: none;
-    }
-
-    .header__burger-close-icon {
-        display: none;
-    }
-
-    .header__close-button {
-        display: none;
-    }
-}

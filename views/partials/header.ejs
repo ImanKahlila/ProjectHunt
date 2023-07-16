@@ -9,7 +9,11 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/imgs/favicon-32x32.png" />
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="/css/pages/create-project.css" />
+    <% if (currentPage==='create' ) { %>
+        <link rel="stylesheet" href="/css/pages/create-project.css" />
+        <% } else if (currentPage==='profile' ) { %>
+            <link rel="stylesheet" href="/css/pages/profile.css" />
+            <% } %>
 </head>
 
 <body>
