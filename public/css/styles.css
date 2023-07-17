@@ -258,6 +258,11 @@ h2 {
     line-height: normal;
 }
 
+.footer__text:first-child {
+
+    margin-bottom: var(--space-2xs);
+}
+
 .footer__author-link {
     color: #FBF9F9;
     text-align: center;
