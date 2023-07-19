@@ -138,6 +138,10 @@ h2 {
     margin: 0;
 }
 
+main {
+    min-height: calc(100vh - 108px);
+}
+
 /******************************************/
 /* Header
 /******************************************/
@@ -237,7 +241,7 @@ h2 {
 /******************************************/
 
 .footer {
-    margin-top: auto;
+    margin-top: var(--space-xs);
     margin-bottom: var(--space-xs);
 }
 
