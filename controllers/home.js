@@ -5,7 +5,6 @@ module.exports = {
   getIndex: (req, res) => {
     res.render("index", {
       head: { title: "Home", css: "" },
-      layout: "layout",
     });
   },
 
@@ -14,7 +13,6 @@ module.exports = {
     try {
       const projects = await Project.find({ creator_id: req.user.id });
       res.render("profile", {
-        layout: "layout",
         projects: projects,
         user: req.user,
         head: { title: "Profile", css: "/css/pages/profile.css" },
