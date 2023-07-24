@@ -1,6 +1,9 @@
 .main {
     display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: Montserrat;
+    min-height: 75vh;
 }
 
 /* Login Side */
@@ -8,19 +11,18 @@
     padding-left: 5%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .left *{
     display: block;
 }
-
 label {
     margin-top: 1rem;;
 }
-
 .signin-button, input {
     border-radius: .5rem;
     padding: .5rem;
-    width: 50%;
+    width: 27vw;
 }
 .signin-button{
     background-color: black;
@@ -28,16 +30,9 @@ label {
     margin-top: 2rem;
     
 }
-
-
-
-
-
-
 .left, .right {
     width: 50%;
 }
-
 
 /* Right side with images */
 .right {
@@ -47,11 +42,7 @@ label {
 .right * {
     width: 33%;
 }
-
-
-
-
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 675px) {
     .right {
         display: none;
     }
@@ -61,7 +52,6 @@ label {
     .signin-button, input {
         border-radius: .5rem;
         padding: .5rem;
-        width: 75%
+        width: 75vw;
     }
 }
-
