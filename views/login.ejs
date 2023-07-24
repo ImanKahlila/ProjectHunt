@@ -11,13 +11,45 @@
       <div role="alert" class="info-message"><%= el.msg %></div>
     <% }) %>
   <% } %>
-  <form action="/login" method="POST">
-    <label for="email">Email address:</label>
-    <input type="email" id="email" name="email">
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password">
-    <button type="submit">Submit</button>
-  </form>
+
+  <!-- Left half of page for logging in -->
+  <div class="main">
+    <div class="left">
+      <h1>Welcome back!</h1>
+      <form action="/login" method="POST">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+        <a href="#">Remember Password</a>
+        <a href="#">Forgot Password?</a>
+        <button type="submit" class="signin-button">Submit</button>
+      </form>
+      <div class="other-buttons">
+        <button type="submit">Sign up with GitHub</button>
+        <button type="submit">Sign up with Discord</button>
+      </div>
+
+      
+    </div>
+
+    <!-- Right half of page with images -->
+    <div class="right">
+      <img src="/img/login/Rectangle 38.png" alt="">
+      <img src="/img/login/Rectangle 36.png" alt="">
+      <img src="/img/login/Rectangle 39.png" alt="">
+      <img src="/img/login/Ellipse 6.png" alt="">
+      <img src="/img/login/Rectangle 40.png" alt="">
+      <img src="/img/login/Rectangle 41.png" alt="">
+      <img src="/img/login/Rectangle 42.png" alt="">
+      <img src="/img/login/Rectangle 36.png" alt="">
+      <img src="/img/login/Rectangle 44.png" alt="">
+      <img src="/img/login/Rectangle 45.png" alt="">
+      <img src="/img/login/Ellipse 7.png" alt="">
+      <img src="/img/login/Rectangle 46.png" alt="">
+    </div>
+</div>
+
 </main>
 
 <%- include('partials/footer') -%>
