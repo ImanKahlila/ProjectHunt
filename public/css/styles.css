@@ -125,10 +125,21 @@ ul {
 
 a {
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #000;
+    color: #788bb0
+}
+
+p,
+h1,
+h2 {
+    margin: 0;
+}
+
+main {
+    min-height: calc(100vh - 108px);
 }
 
 /******************************************/
@@ -188,12 +199,8 @@ a:hover {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    transition: color 0.3s ease;
 }
 
-.header__menu-link:hover {
-    color: #788bb0;
-}
 
 .header__burger-menu-btn {
     background: transparent;
@@ -234,7 +241,7 @@ a:hover {
 /******************************************/
 
 .footer {
-    margin-top: auto;
+    margin-top: var(--space-xs);
     margin-bottom: var(--space-xs);
 }
 
@@ -255,6 +262,11 @@ a:hover {
     line-height: normal;
 }
 
+.footer__text:first-child {
+
+    margin-bottom: var(--space-2xs);
+}
+
 .footer__author-link {
     color: #FBF9F9;
     text-align: center;
@@ -263,12 +275,6 @@ a:hover {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    transition: color 0.3s ease;
-
-}
-
-.footer__author-link:hover {
-    color: #788bb0
 }
 
 /******************************************/
@@ -276,6 +282,33 @@ a:hover {
 /******************************************/
 
 /* Media Query */
+
+@media screen and (min-width: 850px) {
+    .header__menu {
+        transform: translateY(0);
+        position: static;
+        background-color: #FBF9F9;
+        flex-direction: row;
+        padding: 0;
+        gap: var(--space-l)
+    }
+
+    .header__menu-link {
+        color: #1A0F13;
+    }
+
+    .header__burger-menu-btn {
+        display: none;
+    }
+
+    .header__burger-close-icon {
+        display: none;
+    }
+
+    .header__close-button {
+        display: none;
+    }
+}
 
 @media screen and (min-width: 1200px) {
     body {
