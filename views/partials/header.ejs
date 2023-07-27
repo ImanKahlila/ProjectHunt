@@ -5,8 +5,15 @@
             <li class="header__menu-item"><a href="/" class="header__menu-link">Home</a></li>
             <li class="header__menu-item"><a href="/create" class="header__menu-link">Create</a></li>
             <li class="header__menu-item"><a href="#" class="header__menu-link">Browse</a></li>
-            <li class="header__menu-item"><a href="/login" class="header__menu-link">Login</a></li>
-            <li class="header__menu-item"><a href="/signup" class="header__menu-link">Sign Up</a></li>
+            <% if (user) { %>
+                <!-- Show profile and logout links when the user is authenticated -->
+                <li class="header__menu-item"><a href="/profile" class="header__menu-link">Profile</a></li>
+                <li class="header__menu-item"><a href="/logout" class="header__menu-link">Logout</a></li>
+                <% } else { %>
+                    <!-- Show login and signup links for guests (non-authenticated users) -->
+                    <li class="header__menu-item"><a href="/login" class="header__menu-link">Login</a></li>
+                    <li class="header__menu-item"><a href="/signup" class="header__menu-link">Sign Up</a></li>
+                    <% } %>
         </ul>
         <button class="header__burger-menu-btn">
             <i class="header__burger-menu-icon">
