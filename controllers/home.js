@@ -3,9 +3,7 @@ const Project = require("../models/Project");
 module.exports = {
   // Render the home page
   getIndex: (req, res) => {
-    res.render("index", {
-      head: { title: "Home", css: "" },
-    });
+    res.render("index", { user: req.user, head: { title: "Home", css: "" } });
   },
 
   // Render the user profile page
