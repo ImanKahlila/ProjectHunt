@@ -1,5 +1,5 @@
 .profile {
-    color: #1A0F13;
+    color: var(--text);
     margin-top: var(--space-2xs);
     display: flex;
     flex-wrap: wrap;
@@ -60,7 +60,7 @@
 }
 
 .profile__project-title {
-    color: #1A0F13;
+    color: var(--text);
     font-family: Hind;
     font-size: var(--step-1);
     font-weight: 600;
