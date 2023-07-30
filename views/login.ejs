@@ -1,21 +1,3 @@
-<!-- //<%- include('partials/header') -%>
-
-  <main>
-    <% if (locals.messages && locals.messages.errors) { %>
-      <% messages.errors.forEach(el=> { %>
-        <div role="alert" class="error-message">
-          <%= el.msg %>
-        </div>
-        <% }) %>
-          <% } %>
-            <% if (locals.messages && locals.messages.info) { %>
-              <% messages.info.forEach(el=> { %>
-                <div role="alert" class="info-message">
-                  <%= el.msg %>
-                </div>
-                <% }) %>
-                  <% } %> -->
-
 <% if (locals.messages && locals.messages.errors) { %>
   <% messages.errors.forEach(el=> { %>
     <div role="alert" class="error-message">
@@ -53,7 +35,4 @@
                     <img src="/img/login-grid-pic.svg" alt="">
                   </div>
                 </div>
-                <!-- 
-  </main>
-
-  <%- include('partials/footer') -%> -->
+                
