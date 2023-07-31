@@ -6,7 +6,7 @@ exports.getLogin = (req, res) => {
   if (req.user) {
     return res.redirect("/profile");
   }
-  res.render("login", { user: req.user, head: { title: "Profile", css: "" } });
+  res.render("login", { user: req.user, head: { title: "Profile", css: "/css/pages/login.css" } });
 };
 
 exports.postLogin = (req, res, next) => {

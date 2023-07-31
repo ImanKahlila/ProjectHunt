@@ -1,0 +1,101 @@
+.main {
+    display: flex;
+    font-family: Montserrat;
+    min-height: 75vh;
+}
+
+/* Login Side */
+.left {
+    color: #1A0F13;
+    font-family: Montserrat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.left>h1 {
+    margin-top: var(--space-2xl-3xl);
+    margin-bottom: var(--space-s);
+    font-size: var(--step-3);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #1A0F13;
+    font-size: var(--step-1);
+    font-family: Hind;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+label:nth-of-type(2) {
+    margin-top: var(--space-xs);
+}
+
+
+input {
+    font-family: Hind;
+    font-size: var(--step-1);
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #1A0F13;
+    background: #F3E6DD;
+    max-width: 325px;
+}
+
+.left>form>a:first-of-type {
+    margin: var(--space-2xs) 0;
+}
+
+.button {
+    margin: var(--space-xs) 0;
+    padding: var(--space-3xs) var(--space-2xs);
+    border: none;
+    border-radius: 6px;
+    background: #d9d9d9;
+    color: #1A0F13;
+    font-size: var(--step-0);
+    font-family: Hind;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    max-width: 325px;
+}
+.signin-button {
+    background: #C2D5B8;
+}
+
+.left,
+.right {
+    width: 50%;
+}
+
+/* Right side with images */
+.right {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.right>img {
+    max-width: 650px;
+    width: 100%;
+    align-self: flex-start;
+    margin-top: var(--space-2xl-3xl);
+}
+
+@media screen and (max-width: 850px) {
+    .right {
+        display: none;
+    }
+
+    .left {
+        width: 100vw;
+    }
+
+}
