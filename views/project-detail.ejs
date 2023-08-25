@@ -1,0 +1,36 @@
+<div class="card">
+    <div class="card__container">
+        <div class="card__header">
+
+            <h2 class="card__project-title">
+                <%= project.name %>
+            </h2>
+
+            <button class="card__edit-button"><img src="/img/edit-icon.svg" alt="Profile Edit Button"></button>
+        </div>
+        <p class="card__project-desc">
+            <%= project.description %>
+        </p>
+        <div class="card__tags-container">
+            <div class="card__tag">
+                <%= project.status.charAt(0).toUpperCase() + project.status.slice(1) %>
+            </div>
+            <div class="card__tag">
+                <%= project.timezone %>
+            </div>
+            <div class="card__tag">
+                <%= project.organization %>
+            </div>
+
+            <% technologies.forEach((tech)=> { %>
+                <div class="card__tag">
+                    <%= tech.name %>
+                </div>
+                <% }); %>
+        </div>
+    </div>
+
+    <a class="card__external-link-button" href="<%= project.githubUrl %>">
+        <img src="/img/link-icon.svg" alt="Link Button">
+    </a>
+</div>
