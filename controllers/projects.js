@@ -60,5 +60,22 @@ module.exports = {
     } catch (err) {
       console.log(err);
     }
+  }, // Render the project detail page
+  getProject: async (req, res) => {
+    try {
+      const project = await Project.findById(req.params.id);
+      const technologies = await Technology.find({
+        _id: { $in: project.technologiesUsed }
+      });
+
+      res.render("project-detail.ejs", {
+        user: req.user,
+        head: { title: project.name, css: "/css/pages/project-detail.css" },
+        project: project,
+        technologies: technologies
+      });
+    } catch (err) {
+      console.log(err);
+    }
   },
 };

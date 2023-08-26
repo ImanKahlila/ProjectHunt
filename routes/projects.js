@@ -5,6 +5,7 @@ const testController = require("../controllers/test");
 const { ensureAuth } = require("../middleware/auth");
 
 router.get("/create", ensureAuth, projectController.getCreate);
+router.get("/:id", ensureAuth, projectController.getProject);
 router.post("/createProject", projectController.createProject);
 router.get("/getOrgs", projectController.getOrgs);
 router.get("/getTechnologies", projectController.getTechnologies);

@@ -54,7 +54,7 @@ app.use(flash());
 
 //Setup Routes
 app.use("/", mainRoutes);
-app.use("/", projectRoutes);
+app.use("/project", projectRoutes);
 
 //Server Running
 app.listen(process.env.PORT, () => {
