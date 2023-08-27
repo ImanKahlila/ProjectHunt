@@ -147,10 +147,10 @@ main {
 /******************************************/
 
 .header {
+    margin: 0rem 2rem;
     padding: var(--space-s-m) 0;
     position: relative;
 }
-
 .header__nav {
     display: flex;
     justify-content: space-between;
@@ -277,6 +277,164 @@ main {
     line-height: normal;
 }
 
+.header__section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: .6rem;
+}
+
+.header__title {
+    color: #1A0F13;
+    font-family: Montserrat;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.header__paragraph {
+    color: #1A0F13;
+    font-family: Hind;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    width: 100%;
+}
+
+.btn {
+    margin-top: .5rem;
+    padding: .5rem;
+    width: 9.8rem;
+    height: 2.4rem;
+    flex-shrink: 0;
+    transition: all .2s;
+}
+
+.btn--green {
+    border-radius: .3rem;
+    background: #C2D5B8;
+}
+
+.btn:hover {
+    transform: translateY(-.5rem);
+    box-shadow: 0 2rem 4rem rgba(0,0,0, 0.4);
+
+}
+.btn:active {
+    background-color: #cae4bc;
+    transform: translate(0);
+    box-shadow: 0 2rem 4rem rgba(0,0,0, 0.6);
+
+}
+
+.header__sub {
+    color: #1A0F13;
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 1rem;
+}
+
+.card__logo {
+    width: 3.625rem;
+    height: 4.5rem;
+    flex-shrink: 0;
+}
+
+.card {
+    width: 286px;
+    height: 321px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #F4F1F2;
+}
+
+.card__header {
+    color: #1A0F13;
+    font-family: Montserrat;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.card__description {
+    width: 250px;
+    height: 112px;
+    flex-shrink: 0;
+    color: #1A0F13;
+    font-family: Hind;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.cards__section {
+    margin: 3rem 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 1rem 1.5rem 1rem;
+    position: relative;
+    transition: all .2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2rem 4rem rgba(237, 231, 198, 0.867);
+}
+.card__row {
+    margin-top: 2rem;
+}
+
+.card__logo {
+    position: absolute;
+    top: 10%; 
+    left: 35%;
+    height: 8rem;
+
+}
+
+.star--logo {
+    top: 15%; 
+}
+
+.section__featured {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 2rem 1rem;
+}
+
+.section__about {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 /******************************************/
 /* Additional Styles
 /******************************************/
@@ -284,6 +442,17 @@ main {
 /* Media Query */
 
 @media screen and (min-width: 850px) {
+    .header__image {
+        width: 17.9rem;
+        height: 17.9rem;
+    }
+
+    .header__title {
+        width: 14.75rem;
+    }
+    .header__paragraph {
+        width: 14.6rem;
+    }
     .header__menu {
         transform: translateY(0);
         position: static;
@@ -308,10 +477,80 @@ main {
     .header__close-button {
         display: none;
     }
+
+}
+
+@media screen and (max-width: 960px) {
+    .card__row {
+        flex-direction: column;
+    }
+    
+    .section__community {
+        padding: 1rem;
+    }
+
+
 }
 
 @media screen and (min-width: 1200px) {
     body {
         margin: 0 15%;
     }
+}
+@media screen and (max-width: 1100px) {
+    .community__container {
+        flex-direction: column;
+    }
+}
+
+main {
+    margin: 0rem 2rem;
+}
+
+br {
+    margin-top: 2rem;
+}
+
+.section__community {
+    margin: 3rem 0;
+    background: #F4F1F2;
+    width: 100%;
+    height: 100%;
+    padding: 10rem;
+}
+
+.community__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.community__logo {
+    width: 12.5rem;
+    height: 12.5rem;
+}
+
+.section__contact {
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.btn--signup {
+    padding: .7rem 3rem;
+}
+
+.about__paragraph {
+    color: #1A0F13;
+    font-family: Hind;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
 }
