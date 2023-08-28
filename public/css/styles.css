@@ -281,7 +281,6 @@ main {
     width: 100%;
     height: 100%;
     display: flex;
-    text-align: center;
     flex-direction: column;
     align-items: center;
     gap: .6rem;
@@ -308,7 +307,8 @@ main {
 .btn {
     margin-top: .5rem;
     padding: .5rem;
-    width: 9.8rem;
+    width: 5rem;
+    text-align: center;
     height: 2.4rem;
     flex-shrink: 0;
     transition: all .2s;
@@ -353,6 +353,11 @@ main {
     flex-shrink: 0;
     border-radius: 5px;
     background: #F4F1F2;
+}
+
+.about__logo {
+    width: 20rem;
+    height: 20rem;
 }
 
 .card__header {
@@ -427,13 +432,39 @@ main {
     margin: 2rem 1rem;
 }
 
+.header__image {
+    width: 17.9rem;
+    height: 17.9rem;
+}
+
+.header__container--text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
 .section__about {
     width: 100%;
     height: 100%;
+}
+.about__header {
+    text-align: center;
+}
+.about__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.contact__title {
+    color: #1A0F13;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1.9rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 /******************************************/
 /* Additional Styles
@@ -442,10 +473,6 @@ main {
 /* Media Query */
 
 @media screen and (min-width: 850px) {
-    .header__image {
-        width: 17.9rem;
-        height: 17.9rem;
-    }
 
     .header__title {
         width: 14.75rem;
@@ -478,7 +505,60 @@ main {
         display: none;
     }
 
+
 }
+
+@media screen and (min-width: 960px)
+{
+    .header__image {
+        width: 28rem;
+        height: 28rem;
+        order: 3;
+    }
+
+    .contact__title {
+        font-size: 2rem  
+    }
+
+
+    .header__section {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .header__container--text {
+        align-items: flex-start;
+    }
+
+    .header__title {
+        width: fit-content;
+        font-size: 2.75rem;
+    }
+
+    .header__paragraph {
+        font-size: 1.3;
+    }
+
+    .contact__p {
+        text-align: left;
+    }
+
+    .about__container {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .about__paragraph p:not(last-child){
+        margin-bottom: 1rem;
+    }
+
+    .about__logo {
+        width: 37.2rem;
+        height: 37.2rem;
+    }
+
+}
+    
 
 @media screen and (max-width: 960px) {
     .card__row {
@@ -487,6 +567,15 @@ main {
     
     .section__community {
         padding: 1rem;
+    }
+
+    .header__section {
+        text-align: center;
+    }
+
+    .header__container--text {
+        justify-content: center;
+        align-items: center;
     }
 
 
@@ -512,11 +601,11 @@ br {
 }
 
 .section__community {
-    margin: 3rem 0;
+    margin: 2rem 0;
     background: #F4F1F2;
     width: 100%;
     height: 100%;
-    padding: 10rem;
+    padding: 6rem 30rem;
 }
 
 .community__container {

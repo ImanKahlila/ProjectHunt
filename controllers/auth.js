@@ -58,7 +58,7 @@ exports.getSignup = (req, res) => {
   if (req.user) {
     return res.redirect("/profile");
   }
-  res.render("signup", { user: req.user, head: { title: "Sign Up", css: "" } });
+  res.render("signup", { user: req.user, head: { title: "Sign Up", css: "/css/pages/signup.css" } });
 };
 
 exports.postSignup = (req, res, next) => {
