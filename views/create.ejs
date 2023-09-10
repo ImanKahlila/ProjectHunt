@@ -1,46 +1,66 @@
-<%- include('partials/header') -%>
+<div class="create">
 
-    <main>
-        <!-- Form for creating a project -->
-        <form action="/createProject" method="POST">
+    <!-- Form for creating a project -->
+    <form action="/createProject" method="POST" class="create__form">
+        <h1 class="create__title">Create a Project</h1>
 
-            <label for="name">Project Name:</label>
-            <!-- Input field for entering the project name, required field -->
-            <input type="text" id="name" name="name" required>
+        <label for="name" class="create__label">Project Name</label>
+        <!-- Input field for entering the project name, required field -->
+        <input type="text" id="name" name="name" class="create__input" required>
 
-            <label for="description">Project Description:</label>
-            <!-- Textarea for entering the project description, required field -->
-            <textarea id="description" name="description" required></textarea>
+        <label for="description" class="create__label">Description</label>
+        <!-- Textarea for entering the project description, required field -->
+        <textarea id="description" name="description" class="create__textarea" required></textarea>
 
-            <label for="url">GitHub URL:</label>
-            <!-- Input field for entering the GitHub URL, required field -->
-            <input type="text" id="url" name="url" required>
+        <label for="url" class="create__label">GitHub URL</label>
+        <!-- Input field for entering the GitHub URL, required field -->
+        <input type="text" id="url" name="url" class="create__input" required>
 
-            <label for="skill">Skill Level:</label>
-            <!-- Select dropdown for selecting the skill level -->
-            <select id="skill" name="skill" required>
-                <option value="beginner">Beginner</option>
-                <option value="intermediate">Intermediate</option>
-                <option value="advanced">Advanced</option>
-            </select>
+        <label for="organization" class="create__label">Organization</label>
+        <!-- Input field for entering the organization, with id "org-input" and name "org" -->
+        <input type="text" name="org" id="org-input" class="create__input">
+        <!-- Empty div for displaying organization suggestions -->
+        <div id="org-suggestions" class="create__suggestions"></div>
 
-            <label for="status">Project Status:</label>
-            <!-- Select dropdown for selecting the project status -->
-            <select id="status" name="status" required>
-                <option value="planning">Planning</option>
-                <option value="in progress">In Progress</option>
-                <option value="completed">Completed</option>
-                <option value="on hold">On Hold</option>
-            </select>
 
-            <!-- Input field for entering the timezone, with id "timezone-input" and name "timezone" -->
-            <input type="text" name="timezone" id="timezone-input" placeholder="Enter timezone">
-            <!-- Empty div for displaying timezone suggestions -->
-            <div id="timezone-suggestions"></div>
 
-            <!-- Submit button for creating the project -->
-            <button type="submit">Create Project</button>
-        </form>
-    </main>
+        <label for="skill" class="create__label">Skill Level</label>
+        <!-- Select dropdown for selecting the skill level -->
+        <select id="skill" name="skill" class="create__select" required>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select>
 
-    <%- include('partials/footer') -%>
+        <label for="status" class="create__label">Status</label>
+        <!-- Select dropdown for selecting the project status -->
+        <select id="status" name="status" class="create__select" required>
+            <option value="planning">Planning</option>
+            <option value="in progress">In Progress</option>
+            <option value="completed">Completed</option>
+            <option value="on hold">On Hold</option>
+        </select>
+
+        <label for="timezone" class="create__label">Timezone</label>
+        <!-- Input field for entering the timezone, with id "timezone-input" and name "timezone" -->
+        <input type="text" name="timezone" id="timezone-input" class="create__input">
+        <!-- Empty div for displaying timezone suggestions -->
+        <div id="timezone-suggestions" class="create__suggestions"></div>
+
+        <label for="technologies" class="create__label">Technologies</label>
+        <!-- Div acting as the container for entering and displaying technologies -->
+        <div id="technologies-container" class="create__tech">
+            <!-- Hidden input field for storing comma-separated values -->
+            <input type="hidden" name="technologies" id="technology-input" class="create__tag-input">
+            <!-- Input field for entering technologies -->
+            <input type="text" id="technology-text-input" class="create__input">
+            <!-- Container for displaying tags -->
+            <div id="tags" class="create__tag-container"></div>
+        </div>
+        <!-- Empty div for displaying technology suggestions -->
+        <div id="technology-suggestions" class="create__suggestions"></div>
+
+        <!-- Submit button for creating the project -->
+        <button type="submit" class="create__submit">Create</button>
+    </form>
+</div>

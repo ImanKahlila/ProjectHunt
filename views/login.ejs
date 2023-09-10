@@ -1,23 +1,38 @@
-<%- include('partials/header') -%>
-
-<main>
-  <% if (locals.messages && locals.messages.errors) { %>
-    <% messages.errors.forEach(el => { %>
-      <div role="alert" class="error-message"><%= el.msg %></div>
+<% if (locals.messages && locals.messages.errors) { %>
+  <% messages.errors.forEach(el=> { %>
+    <div role="alert" class="error-message">
+      <%= el.msg %>
+    </div>
     <% }) %>
-  <% } %>
-  <% if (locals.messages && locals.messages.info) { %>
-    <% messages.info.forEach(el => { %>
-      <div role="alert" class="info-message"><%= el.msg %></div>
-    <% }) %>
-  <% } %>
-  <form action="/login" method="POST">
-    <label for="email">Email address:</label>
-    <input type="email" id="email" name="email">
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password">
-    <button type="submit">Submit</button>
-  </form>
-</main>
+      <% } %>
+        <% if (locals.messages && locals.messages.info) { %>
+          <% messages.info.forEach(el=> { %>
+            <div role="alert" class="info-message">
+              <%= el.msg %>
+            </div>
+            <% }) %>
+              <% } %>
 
-<%- include('partials/footer') -%>
+                <!-- Left half of page for logging in -->
+                <div class="main">
+                  <div class="left">
+                    <h1>Welcome back!</h1>
+                    <form action="/login" method="POST">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" placeholder="Enter your email">
+                      <label for="password">Password</label>
+                      <input type="password" id="password" name="password" placeholder="Enter your password">
+                      <a href="#">Remember Password</a>
+                      <a href="#">Forgot Password?</a>
+                      <button type="submit" class="button signin-button">Submit</button>
+                      <button type="submit" class="button"><i class="fa-brands fa-github"></i> Sign up with GitHub</button>
+                      <button type="submit" class="button"><i class="fa-brands fa-discord"></i> Sign up with Discord</button>
+                    </form>
+                  </div>
+
+                  <!-- Right half of page with images -->
+                  <div class="right">
+                    <img src="/img/login-grid-pic.svg" alt="">
+                  </div>
+                </div>
+                

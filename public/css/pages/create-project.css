@@ -1,0 +1,112 @@
+/* Create Page */
+
+.create__title {
+    color: #1A0F13;
+    font-size: var(--step-3);
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: var(--space-l-xl);
+    margin-bottom: var(--space-xs-s);
+}
+
+.create__form {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.create__label {
+    color: #1A0F13;
+    font-size: var(--step-1);
+    font-family: Hind;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.create__input,
+.create__textarea,
+.create__select {
+    font-family: Hind;
+    font-size: var(--step-1);
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #1A0F13;
+    background: #F3E6DD;
+}
+
+
+
+.create__form .create__label:not(:first-of-type) {
+    margin-top: var(--space-s);
+}
+
+.create__tag-container {
+    margin-top: var(--space-2xs);
+    display: flex;
+}
+
+.tag {
+    font-size: var(--step-0);
+    font-family: Hind;
+    background-color: #788bb0;
+    border-radius: 50px;
+    padding: var(--space-3xs) var(--space-2xs);
+    margin-right: var(--space-2xs);
+    display: flex;
+    align-items: center;
+}
+
+.tag-remove-btn {
+    margin-left: var(--space-3xs);
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    width: 20px;
+    height: 20px;
+}
+
+.tag-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.create__submit {
+    margin: var(--space-l-xl) 0;
+    align-self: flex-end;
+    width: 112px;
+    height: 55px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 6px;
+    background: #C2D5B8;
+    color: #1A0F13;
+    font-size: var(--step-0);
+    font-family: Hind;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.create__submit:hover {
+    transform: translate(0, -3px);
+    box-shadow: 0 20px 80px -10px #C2D5B8;
+}
+
+#awesomplete_list_2,
+#awesomplete_list_1,
+#awesomplete_list_3 {
+    border-radius: 5px;
+    border: 1px solid #1A0F13;
+    background: #F3E6DD;
+    width: 199px;
+    font-size: var(--step-1);
+}
+
+mark {
+    background-color: #788bb0;
+}

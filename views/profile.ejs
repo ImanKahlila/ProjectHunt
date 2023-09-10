@@ -1,11 +1,37 @@
-<%- include('partials/header') -%>
-    <main>
-        <section>
-            <p><strong>User Name</strong>: <%= user.userName %>
-            </p>
-            <p><strong>Email</strong>: <%= user.email %>
-            </p>
-            <a href="/logout">Logout</a>
-        </section>
-    </main>
-    <%- include('partials/footer') -%>
+<div class="profile">
+    <section class="profile__card">
+        <div class="profile__card-top">
+            <img class="profile__image" src="./img/default-profile-picture.svg"
+                alt="Profile Image of <%= user.userName %>">
+            <!-- TODO: Editing profile functionality -->
+            <button class="profile__edit-btn" aria-label="Edit Profile">
+                <img src="/img/edit-icon.svg" alt="Profile Edit Button" class="profile__edit-icon">
+            </button>
+        </div>
+        <h1 class="profile__title">
+            <%= user.userName %>
+        </h1>
+        <p class="profile__email">
+            <%= user.email %>
+        </p>
+        <p class="profile__desc">
+            I'm a passionate web developer with a focus on CSS and front-end design. I love creating beautiful and
+            engaging user interfaces using the latest web technologies.
+        </p>
+    </section>
+
+    <section class="profile__card">
+        <h1 class="profile__title">Projects</h1>
+        <% projects.forEach((project)=> { %>
+            <div class="profile__project">
+                <!-- TODO: Implement project detail page -->
+                <a href="/project/<%= project._id%>" class="profile__project-title">
+                    <%= project.name %>
+                </a>
+                <p class="profile__project-desc">
+                    <%= project.description %>
+                </p>
+            </div>
+            <% }); %>
+    </section>
+</div>
