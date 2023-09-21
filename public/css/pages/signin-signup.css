@@ -1,6 +1,13 @@
 .signin-signup {
     display: flex;
     flex-direction: column;
+    margin-top: var(--space-3xl);
+}
+
+.signin-signup__container {
+    max-width: 405px;
+    width: 100%;
+    margin: auto;
 }
 
 .signin-signup__title {
@@ -52,4 +59,22 @@
 
 .signin-signup__img {
     display: none;
+    margin-left: var(--space-3xl);
+}
+
+
+@media screen and (min-width: 850px) {
+    .signin-signup__img {
+        display: block;
+    }
+
+    .signin-signup {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .signin-signup__container {
+        margin: 0;
+    }
+
 }
