@@ -12,6 +12,9 @@
     <% if (head.css) { %>
         <link rel="stylesheet" href="<%= head.css %>">
         <% } %>
+            <% if (head.title=="Home" ) { %>
+                <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" media="screen">
+                <% } %>
 </head>
 
 <body>

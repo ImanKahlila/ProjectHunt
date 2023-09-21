@@ -5,6 +5,7 @@
     </div>
     <% }) %>
       <% } %>
+
         <% if (locals.messages && locals.messages.info) { %>
           <% messages.info.forEach(el=> { %>
             <div role="alert" class="info-message">
@@ -14,25 +15,25 @@
               <% } %>
 
                 <!-- Left half of page for logging in -->
-                <div class="main">
-                  <div class="left">
-                    <h1>Welcome back!</h1>
-                    <form action="/login" method="POST">
-                      <label for="email">Email</label>
-                      <input type="email" id="email" name="email" placeholder="Enter your email">
-                      <label for="password">Password</label>
-                      <input type="password" id="password" name="password" placeholder="Enter your password">
-                      <a href="#">Remember Password</a>
-                      <a href="#">Forgot Password?</a>
-                      <button type="submit" class="button signin-button">Submit</button>
-                      <button type="submit" class="button"><i class="fa-brands fa-github"></i> Sign up with GitHub</button>
-                      <button type="submit" class="button"><i class="fa-brands fa-discord"></i> Sign up with Discord</button>
+                <div class="signin-signup">
+                  <div class="signin-signup__container">
+                    <h1 class="signin-signup__title">Welcome back!</h1>
+                    <form action="/login" method="POST" class="signin-signup__form">
+                      <label for="email" class="signin-signup__label">Email</label>
+                      <input type="email" id="email" name="email" placeholder="Enter your email"
+                        class="signin-signup__input">
+                      <label for="password" class="signin-signup__label">Password</label>
+                      <input type="password" id="password" name="password" placeholder="Enter your password"
+                        class="signin-signup__input">
+                      <a href="#" class="signin-signup__link">Remember Password</a>
+                      <a href="#" class="signin-signup__link">Forgot Password?</a>
+                      <button type="submit" class="btn signin-signup__button">Submit</button>
+                      <!-- TODO -->
+                      <!--
+      <button type="submit" class="btn"><i class="fa-brands fa-github"></i> Sign up with GitHub</button>
+      <button type="submit" class="btn"><i class="fa-brands fa-discord"></i> Sign up with Discord</button>
+      -->
                     </form>
                   </div>
-
-                  <!-- Right half of page with images -->
-                  <div class="right">
-                    <img src="/img/login-grid-pic.svg" alt="">
-                  </div>
+                  <img src="/img/login-grid-pic.svg" alt="" class="signin-signup__img">
                 </div>
-                
