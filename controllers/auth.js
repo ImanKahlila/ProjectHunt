@@ -6,7 +6,7 @@ exports.getLogin = (req, res) => {
   if (req.user) {
     return res.redirect("/profile");
   }
-  res.render("login", { user: req.user, head: { title: "Profile", css: "/css/pages/login.css" } });
+  res.render("login", { user: req.user, head: { title: "Profile", css: "/css/pages/signin-signup.css" } });
 };
 
 exports.postLogin = (req, res, next) => {
@@ -58,7 +58,7 @@ exports.getSignup = (req, res) => {
   if (req.user) {
     return res.redirect("/profile");
   }
-  res.render("signup", { user: req.user, head: { title: "Sign Up", css: "" } });
+  res.render("signup", { user: req.user, head: { title: "Sign Up", css: "/css/pages/signin-signup.css" } });
 };
 
 exports.postSignup = (req, res, next) => {

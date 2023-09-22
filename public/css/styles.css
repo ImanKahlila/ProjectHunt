@@ -116,6 +116,7 @@ body {
     flex-direction: column;
     margin: 0 5%;
     background-color: #FBF9F9;
+    color: #1A0F13;
 }
 
 
@@ -126,16 +127,31 @@ ul {
 a {
     text-decoration: none;
     transition: color 0.3s ease;
+    color: #1A0F13;
 }
 
 a:hover {
     color: #788bb0
 }
 
+
 p,
 h1,
 h2 {
     margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: Montserrat;
+}
+
+a,
+p,
+label {
+    font-family: Hind;
 }
 
 main {
@@ -275,6 +291,24 @@ main {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+/* Button */
+.btn {
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    display: block;
+    border-radius: 6px;
+    background: #C2D5B8;
+    padding: var(--space-xs) var(--space-m);
+    color: #1A0F13;
+    font-family: Hind;
 }
 
 /******************************************/

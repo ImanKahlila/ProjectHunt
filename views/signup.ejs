@@ -1,28 +1,38 @@
-<% if (locals.messages && locals.messages.errors) { messages.errors.forEach(el=> { %>
-  <div>
-    <%= el.msg %>
-  </div>
-  <% }) } %>
+<% if (locals.messages && locals.messages.errors) { %>
+  <% messages.errors.forEach(el=> { %>
+    <div class="error-message">
+      <%= el.msg %>
+    </div>
+    <% }) %>
+      <% } %>
 
-    <% if (locals.messages && locals.messages.info) { messages.info.forEach(el=> { %>
-      <div>
-        <%= el.msg %>
-      </div>
-      <% }) } %>
+        <% if (locals.messages && locals.messages.info) { %>
+          <% messages.info.forEach(el=> { %>
+            <div class="info-message">
+              <%= el.msg %>
+            </div>
+            <% }) %>
+              <% } %>
+                <div class="signin-signup">
+                  <div class="signin-signup__container">
+                    <h1 class="signin-signup__title">Welcome!</h1>
+                    <form action="/signup" method="POST" class="signin-signup__form">
+                      <label for="userName" class="signin-signup__label">User Name:</label>
+                      <input type="text" id="userName" name="userName" class="signin-signup__input">
 
-        <form action="/signup" method="POST">
-          <label for="userName">User Name:</label>
-          <input type="text" id="userName" name="userName">
+                      <label for="email" class="signin-signup__label">Email address:</label>
+                      <input type="email" id="email" aria-describedby="emailHelp" name="email"
+                        class="signin-signup__input">
 
-          <label for="email">Email address:</label>
-          <input type="email" id="email" aria-describedby="emailHelp" name="email">
-          <small>We'll never share your email with anyone else.</small>
+                      <label for="password" class="signin-signup__label">Password:</label>
+                      <input type="password" id="password" name="password" class="signin-signup__input">
 
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password">
+                      <label for="confirmPassword" class="signin-signup__label">Confirm Password:</label>
+                      <input type="password" id="confirmPassword" name="confirmPassword" class="signin-signup__input">
 
-          <label for="confirmPassword">Confirm Password:</label>
-          <input type="password" id="confirmPassword" name="confirmPassword">
+                      <button type="submit" class="btn signin-signup__button">Submit</button>
+                    </form>
+                  </div>
+                  <img src="/img/login-grid-pic.svg" alt="" class="signin-signup__img">
 
-          <button type="submit">Submit</button>
-        </form>
+                </div>
