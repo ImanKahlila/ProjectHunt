@@ -216,8 +216,10 @@ Distributed under the no License. See LICENSE.txt for more information.
 
 <!-- Contact -->
 ## Contact
-
-
+- https://github.com/ImanKahlila
+- https://github.com/ThomasCarney315
+- https://github.com/andrewquach-dev
+- https://github.com/IreneLinWasHere
 
 
 <!-- Acknowledgments -->
