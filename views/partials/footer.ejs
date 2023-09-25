@@ -6,29 +6,23 @@
     </div>
 </footer>
 
+<script src="/js/main.js"></script>
 
-<script src="js/main.js"></script>
-
-<!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/181678ba9d.js" crossorigin="anonymous"></script>
 
-<!-- Condition: If the current page is 'create' -->
 <% if (head.title==="Create Project" ) { %>
-    <!-- Include the Awesomplete library from a CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js"
         integrity="sha512-HcBl0GSJvt4Qecm4srHapirUx0HJDi2zYXm6KUKNNUGdTIN9cBwakVZHWmRVj4MKgy1AChqhWGYcMDbRKgO0zg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- It provides autocomplete functionality for input fields -->
 
-    <!-- Include the js file for organization field awesomplete suggestions data from DB -->
-    <script src="js/organization.js"></script>
+    <script src="/js/organization.js"></script>
 
-    <!-- Include the js file for timezone field awesomplete suggestions data from DB -->
-    <script src="js/timezone.js"></script>
+    <script src="/js/timezone.js"></script>
 
-    <!-- Include the js file for technology field awesomplete suggestions data from DB -->
-    <script src="js/technology.js"></script>
+    <script src="/js/technology.js"></script>
     <% } else if(head.title==="Home" ) { %>
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-        <script src="js/carousel.js"></script>
-        <% } %>
+        <script src="/js/carousel.js"></script>
+        <% } else if(head.title==="Browse" ) { %>
+            <script src="/js/browse.js"></script>
+            <% } %>

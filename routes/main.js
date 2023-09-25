@@ -2,10 +2,12 @@ const express = require("express");
 const router = express.Router();
 const homeController = require("../controllers/home");
 const authController = require("../controllers/auth");
+const projectController = require("../controllers/projects");
 const { ensureAuth } = require("../middleware/auth");
 
 router.get("/", homeController.getIndex);
 router.get("/profile", ensureAuth, homeController.getProfile);
+router.get("/browse", projectController.searchProjects);
 
 //Routes for user login/signup
 router.get("/login", authController.getLogin);
