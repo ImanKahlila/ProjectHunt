@@ -1,19 +1,19 @@
-// Retrieve an array of organizations from mongoDB collection for awesomplete suggestions
+document.addEventListener("DOMContentLoaded", () => {
+  async function getOrgs() {
+    const input = document.getElementById("org-input");
 
-async function getOrgs() {
-  const input = document.getElementById("org-input");
-
-  try {
-    const response = await fetch("/getOrgs", {
-      method: "get",
-      headers: { "Content-type": "application/json" },
-      body: JSON.stringify(),
-    });
-    const orgNames = await response.json();
-    new Awesomplete(input, { list: orgNames });
-  } catch (err) {
-    console.log(err);
+    try {
+      const response = await fetch("/project/getOrgs", {
+        method: "get",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify(),
+      });
+      const orgNames = await response.json();
+      new Awesomplete(input, { list: orgNames });
+    } catch (err) {
+      console.log(err);
+    }
   }
-}
 
-getOrgs();
+  getOrgs();
+});

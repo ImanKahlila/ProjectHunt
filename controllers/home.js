@@ -19,4 +19,16 @@ module.exports = {
       console.log(err);
     }
   },
+  // getBrowse: async (req, res) => {
+  //   try {
+  //     console.log('yay')
+  //     res.render("browse.ejs", {
+  //       user: req.user,
+  //       head: { title: "Browse", css: "/css/pages/browse.css" },
+  //     });
+  //     console.log('wtf')
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // },
 };

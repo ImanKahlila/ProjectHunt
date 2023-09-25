@@ -1,0 +1,38 @@
+<div class="browse-page">
+    <div class="search">
+        <h1 class="search__heading">Browse Projects</h1>
+        <div class="search__input-container">
+            <span class="search__icon">
+                <img src="/img/search-4-svgrepo-com 1.svg" alt="Icon Description">
+            </span>
+            <input type="text" id="searchInput" class="search__input" placeholder="Search Projects">
+        </div>
+    </div>
+    <!-- TODO -->
+    <!-- <div class="search-tag">
+        <div class="search-tag__header">
+            <h3 class="search-tag__sub-heading">Tags</h3>
+            <button class="search-tag__btn">Clear</button>
+        </div>
+        <input type="text" class="search-tag__input">
+    </div> -->
+    <div class="search-results">
+        <% if (projects && projects.length> 0) { %>
+            <ul id="searchResults" class="search-results__list">
+                <% projects.forEach((project)=> { %>
+                    <li class="search-results__card">
+
+                        <a href="/project/<%= project._id%>" class="search-results__name">
+                            <%= project.name %>
+                        </a>
+                        <p class="search-results__description">
+                            <%= project.description %>
+                        </p>
+                    </li>
+                    <% }); %>
+            </ul>
+            <% } else { %>
+                <p>No projects found.</p>
+                <% } %>
+    </div>
+</div>
