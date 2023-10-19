@@ -160,6 +160,9 @@ Install dependencies
   npm install
 ```
 
+Setup config.env file <a href="https://github.com/ImanKahlila/ProjectHunt/blob/79-add-configenv-instructions-to-readme/DBconfig.md">Details Here</a>
+![image](https://github.com/ImanKahlila/ProjectHunt/assets/118192650/4c30e9e2-f8f7-475a-8a18-d5d397cfd98f)
+
 Start the server
 
 ```bash
